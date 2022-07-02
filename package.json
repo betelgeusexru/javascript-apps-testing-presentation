@@ -1,0 +1,30 @@
+{
+  "name": "testing-presentation",
+  "version": "1.0.0",
+  "description": "Здесь рассказывается о том, какие виды тестирования бывают, как их писать плюс и минусы тестирования и наглядные примеры",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betelgeusexru/javascript-apps-testing-presentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betelgeusexru/javascript-apps-testing-presentation/issues"
+  },
+  "homepage": "https://github.com/betelgeusexru/javascript-apps-testing-presentation#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-flow": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^28.1.2",
+    "typescript": "^4.7.4"
+  }
+}
