@@ -20,3 +20,7 @@
 # branch react-router-basics
 
 тут рассказываются о базовых принципах тестирования react router dom v6
+
+# branch redux-basics
+
+тут рассказываются о базовых принципах тестирования redux
