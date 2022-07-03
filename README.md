@@ -16,3 +16,7 @@
 # branch react-basics
 
 тут рассказываются о базовых принципах тестирования react приложений
+
+# branch react-router-basics
+
+тут рассказываются о базовых принципах тестирования react router dom v6
