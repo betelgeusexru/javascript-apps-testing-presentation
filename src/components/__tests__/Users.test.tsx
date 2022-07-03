@@ -1,15 +1,15 @@
 import React from "react";
-import axios from "axios";
 import { render, screen } from "@testing-library/react";
-import { Users } from "../Users";
+import { API_USERS_ENDPOINT, Users } from "../Users";
+import MockAdapter from "axios-mock-adapter";
+import axios from "axios";
 
-jest.mock("axios");
+const adapter = new MockAdapter(axios);
 
-describe("Component Users.tsx works corect", () => {
-  let response: any;
-
-  beforeEach(() => {
-    response = [
+adapter.onGet(API_USERS_ENDPOINT).reply(function (config) {
+  return [
+    200,
+    [
       {
         id: 1,
         name: "Leanne Graham",
@@ -79,17 +79,16 @@ describe("Component Users.tsx works corect", () => {
           bs: "e-enable strategic applications",
         },
       },
-    ];
-  });
+    ],
+  ];
+});
 
+describe("Component Users.tsx works corect", () => {
   test("renders user list", async () => {
     render(<Users />);
 
-    // @ts-ignore
-    axios.get.mockReturnValue(response);
-    const users = await screen.findAllByTestId("users-item");
+    const users = await screen.findAllByTestId("user-item");
 
     expect(users.length).toBe(3);
-    expect(axios.get).toHaveBeenCalledTimes(1);
   });
 });
