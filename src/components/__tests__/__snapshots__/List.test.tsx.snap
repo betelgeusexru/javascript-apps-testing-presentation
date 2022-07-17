@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component renders correct when empty list provided 1`] = `
+<div>
+  <h1>
+    no items at all.
+  </h1>
+</div>
+`;
+
+exports[`List component renders correct when list provided 1`] = `
+<div>
+  <ul>
+    <div>
+      мы должны сломать тебя
+    </div>
+    <li>
+      apple
+    </li>
+    <li>
+      banana
+    </li>
+    <li>
+      tomato
+    </li>
+  </ul>
+</div>
+`;
