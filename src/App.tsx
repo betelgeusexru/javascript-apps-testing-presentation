@@ -1,10 +1,14 @@
 import React from "react";
-import { BasicComponent } from "./components/Basic";
+import { Routes, Route } from "react-router-dom";
+import { ForPageTest } from "./pages/ForTestPage";
 
 function App() {
   return (
     <div>
-      <BasicComponent />
+      <Routes>
+        <Route path="/" element={<h1>main page</h1>} />
+        <Route path="/for_test_page" element={<ForPageTest />} />
+      </Routes>
     </div>
   );
 }
