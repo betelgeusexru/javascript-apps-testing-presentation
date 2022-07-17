@@ -4,8 +4,6 @@ import { Provider } from "react-redux";
 import { createReduxStore } from "../../store/store";
 import { Counter } from "../Counter";
 
-const dispatch = dispsatch;
-
 describe("Counter Component", () => {
   test("value is changing", () => {
     render(
@@ -24,10 +22,17 @@ describe("Counter Component", () => {
   });
 
   test("dispatch called only once", () => {
+    const store = createReduxStore();
+    const spy = jest.spyOn(store, "dispatch");
+
     render(
-      <Provider store={createReduxStore()}>
+      <Provider store={store}>
         <Counter />
       </Provider>
     );
+
+    fireEvent.click(screen.getByTestId("increment"));
+
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
